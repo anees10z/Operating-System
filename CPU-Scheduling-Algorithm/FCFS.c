@@ -48,4 +48,13 @@ void main()
         printf("| %-5d | %-10d | %-12d | %-15d |\n", pid[i], bt[i], wt[i], tat[i]);
     }
     printf("----------------------------------------------\n");
+    // Calculate average waiting time and turnaround time
+	float total_wt = 0, total_tat = 0;
+	for (int i = 0; i < n; i++)
+	{
+		total_wt += wt[i];
+		total_tat += tat[i];
+	}
+	printf("\nAverage Waiting Time: %.2f\n", total_wt / n);
+	printf("Average Turnaround Time: %.2f\n", total_tat / n);
 }
