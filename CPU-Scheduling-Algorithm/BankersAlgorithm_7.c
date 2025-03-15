@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define P 3  // Number of processes
+#define P 5  // Number of processes
 #define R 3  // Number of resources
 
 int alloc[P][R], max[P][R], need[P][R], avail[R];
