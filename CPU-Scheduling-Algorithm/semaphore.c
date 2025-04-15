@@ -42,3 +42,38 @@ int main()
 
     return 0;
 }
+
+/*
+#include <stdio.h>
+#include <unistd.h> 
+
+int main()
+{
+    int semaphore = 2;
+    int thread = 5;
+    
+    printf("Only 2 thread access resources at a time \n");
+    
+    for(int i = 1; i<=thread; ++i)
+    {
+        printf("Thread %d is waiting for accessing resource\n", i);
+        if(semaphore > 0)
+        {
+            semaphore--;
+            printf("Thread %d is accessing resource\n", i);
+            sleep(2);
+            semaphore++;
+            printf("Thread %d is finished accessing resource\n", i);
+        }
+        else
+        {
+            printf("Resouces are full\n");
+            i--;
+        }
+        sleep(1);
+    }
+    printf("\nAll threads are finished\n");
+    
+    return 0;
+}
+*/
